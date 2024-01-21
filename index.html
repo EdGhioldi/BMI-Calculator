@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Proyecto IMC</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />    
+    </head>
+    <body>
+        <form name="bmiForm">
+            <div class="bmi-calculator">
+                <h1>Calculate your BMI</h1>
+                <div class="bmi-calculator-weight">
+                    <input class="weight-slider" name="realweight" id="myWeight" 
+                    type="range" min="25" max="180" value="60">
+                    <p class="space"> 
+                        WEIGHT:
+                        <input id="inputWeight" type="number" value="60" min="25"
+                        max="100" oninput="showValWeight(this.value)"/>
+                        <span id="weigth"></span> kg
+                    </p>
+                </div>
+                <div class="bmi-calculator-height">
+                    <input class="height-slider" name="realheight" id="myHeight"
+                    type="range" min="100" max="220" value="160">
+                    <p class="space">
+                        HEIGHT:
+                        <input name="visina" id="inputHeight" type="number" 
+                        value="160" min="100" max="220" oninput="showValHeight(this.value)"/>
+                        <span id="height"></span>cm
+                    </p>
+                </div>
+                <input class="btn" type="button" value="Calculate" onclick="calculateBmi()">
+                <p>
+                    <Strong>Your BMI: </Strong>
+                    <span id="yourbmi"></span>
+                </p>
+                <p class="evaluation-message">
+                    <span id="evaluationMessage"></span>
+                </p>
+            </div>
+        </form>
+        <script src="script.js"></script>
+    </body>
+</html>
